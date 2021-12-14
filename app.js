@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static("public"))
 
 
 app.post("/compose",(req, res) =>{
