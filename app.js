@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname + '/public/css'));
+app.use(express.static(__dirname + '/public'));
 
 
 app.post("/compose",(req, res) =>{
@@ -46,7 +46,6 @@ app.get("/posts/:postName", (req, res) => {
     if(storedTitle === requestedTitle){
      
       res.render("post", { title: post.title , content : post.content});
-    
     }
     
   })
